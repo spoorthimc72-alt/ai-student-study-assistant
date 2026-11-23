@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Student Study Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#home"><span>✦</span> StudyAI</a>
+    <nav><a href="#home">Home</a><a href="#tools">AI Tools</a><a href="#planner">Planner</a><a href="#about">About</a></nav>
+    <button class="login-button" onclick="showMessage('Demo login: arjun@studyai.demo / demo123')">Student Login</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy"><p class="eyebrow">AI STUDENT STUDY ASSISTANT</p><h1>Study smarter.<br><span>Learn faster.</span></h1><p class="intro">A simple AI-powered study companion for engineering students. Ask questions, make notes, practice quizzes, and plan your day in one place.</p><a class="primary-button" href="#tools">Get Started →</a></div>
+      <div class="hero-art"><div class="glow"></div><div class="brain">◉</div><div class="floating-card one">✓ 7 day streak</div><div class="floating-card two">✦ AI ready</div></div>
+    </section>
+
+    <section id="tools" class="section"><div class="section-title"><p class="eyebrow">YOUR STUDY TOOLKIT</p><h2>Everything you need to make progress</h2></div><div class="tool-grid">
+      <article class="tool-card"><div class="tool-icon">💬</div><h3>AI Tutor</h3><p>Ask an academic question and get a simple explanation.</p><input id="question" placeholder="Ask a question..."><button onclick="askTutor()">Ask AI</button><p id="answer" class="result"></p></article>
+      <article class="tool-card"><div class="tool-icon">📝</div><h3>Smart Notes</h3><p>Turn a topic into short revision notes.</p><input id="topic" placeholder="Enter a topic..."><button onclick="makeNotes()">Generate Notes</button><p id="notes" class="result"></p></article>
+      <article class="tool-card"><div class="tool-icon">❓</div><h3>Quick Quiz</h3><p>Test yourself and get instant feedback.</p><p class="quiz-question">Which data structure follows LIFO?</p><select id="quizAnswer"><option value="">Choose answer</option><option value="Queue">Queue</option><option value="Stack">Stack</option><option value="Graph">Graph</option></select><button onclick="checkQuiz()">Check Answer</button><p id="quizResult" class="result"></p></article>
+    </div></section>
+
+    <section id="planner" class="section planner-section"><div class="section-title"><p class="eyebrow">STUDY PLANNER</p><h2>Plan today. Finish with confidence.</h2></div><div class="planner"><div><input id="taskInput" placeholder="Add a study task..."><button onclick="addTask()">+ Add Task</button></div><ul id="taskList"><li onclick="completeTask(this)"><span>Review dynamic programming</span><small>09:00 AM</small></li><li onclick="completeTask(this)"><span>Practice circuit analysis</span><small>11:30 AM</small></li><li onclick="completeTask(this)"><span>Read operating systems notes</span><small>02:00 PM</small></li></ul><p id="progress">Completed: 0 tasks</p></div></section>
+
+    <section id="about" class="about"><p class="eyebrow">ABOUT STUDYAI</p><h2>Built for students who want clarity, not clutter.</h2><p>StudyAI is a college project demonstration showing how artificial intelligence can support everyday engineering study habits through tutoring, summarization, practice, and planning.</p></section>
+  </main>
+  <footer>© 2026 AI Student Study Assistant · Made for engineering students</footer>
+  <div id="message" class="message"></div>
+  <script src="script.js"></script>
+</body>
+</html>
