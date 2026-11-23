@@ -1,14 +1,31 @@
 # AI Student Study Assistant
 
-React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
+A modern, responsive educational dashboard for engineering students. StudyAI combines a polished study workspace with interactive AI-style demonstrations for tutoring, note generation, quizzes, planning, PDF summarization, and progress tracking.
 
-- `pnpm dev`: development server; honors `PORT` (default 3000).
-- `pnpm build` / `pnpm start`: build and serve `dist/index.js` and `dist/public/`.
-- `pnpm db:migrate`: apply checked-in migrations. `pnpm db:push`: generate and apply new schema changes.
-- `pnpm check` / `pnpm test`: types and application tests.
+## Included experience
 
-Start with the Webdev skill's default-template guide. Platform login, storage, payments and service contracts live in its shared references; read the relevant capability before extending its helper.
+- Landing/dashboard experience with blue, purple, and white visual system
+- Responsive sidebar navigation and mobile menu
+- AI Tutor chat with suggested prompts and conversational answers
+- Smart Notes generator with topic presets and copy interaction
+- Quiz Generator with answer selection, instant feedback, and scoring
+- Study Planner with add-task flow, completion tracking, and focus score
+- PDF Summarizer upload affordance with sample generated summary
+- Progress cards, weekly chart, streaks, and task completion metrics
+- Demo login modal, search, About/Contact feedback actions, toasts, and smooth transitions
 
-`server/_core/publicConfig.ts` exposes only named public runtime values. Private keys stay server-side. The platform serves managed `/manus-storage/` assets; the application does not register a second proxy.
+## Run locally
 
-Platform configuration is readable and editable through `webdev.config`. Default settings are initial values, not enforced constraints. The agent may modify the files, commands and configuration or follow the flexible guide for another stack.
+```bash
+pnpm install
+pnpm dev
+```
+
+The development server uses port `3000` by default. The project is built with React, Vite, TypeScript, Tailwind CSS, Lucide icons, and the Webdev React/Express starter.
+
+## Demo account
+
+- Email: `arjun@studyai.demo`
+- Password: `demo123`
+
+The current college-project demo keeps interactive state in the browser so faculty can explore the experience without paid subscriptions or third-party API keys.
